@@ -3,9 +3,13 @@
         <div>
             <label> Product Id </label>
             <input type="text" class="form-control" formControlName="productId">
+            <div *ngIf="productForm.controls['productId'].hasError('required')" class="alert alert-danger">
+                Please enter a product id
+                </div>
+                
         </div>
 
-        
+
         <button [disabled]="!productForm.valid" type="submit" class="btn btn-primary">Submit</button>
     </div>
 </form>
