@@ -1,17 +1,29 @@
 <h1>Angular Template Driven Form</h1>
 <hr />
 <h3>User Form - 2</h3>
-<form #userForm="ngForm">
+<form #userForm="ngForm" (ngSubmit)="saveData()">
     <div class="form-group">
 
-        Name : <input type="text" id="firstname" name="firstname" 
-            required 
-            minlength="4" 
-            #firstname="ngModel"
+        Name : <input type="text" id="firstname" name="firstname" class="form-control" required minlength="4" #firstname="ngModel"
             [(ngModel)]="myName">
 
         <div *ngIf="!firstname?.valid && (firstname?.dirty || firstname?.touched)" class="alert alert-danger">
             Invalid First Name
+        </div>
+        <div>
+            <label>PostalCode</label>
+            <input type="text" #refPinCode="ngModel" required pattern="^[1-9][0-9]{4}$" class="form-control" name="postalCode"
+                ngModel
+                [(ngModel)]="postalCode">
+            <div *ngIf="refPinCode.errors && (refPinCode.dirty || refPinCode.touched)" class="alert alert-danger">
+                <div *ngIf="refPinCode.errors?.['pattern']">
+                    Please enter a five digit number.
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <button type="submit" [disabled]="!userForm.form.valid" class="btn btn-primary">Submit</button>
         </div>
 
     </div>

@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class UserformComponent {
   myName:string = "";
+  postalCode:string ="";
+  saveData(){
+      console.log(this.myName +"    "+this.postalCode);
+  }
 }
