@@ -5,11 +5,30 @@
             <input type="text" class="form-control" formControlName="productId">
             <div *ngIf="productForm.controls['productId'].hasError('required')" class="alert alert-danger">
                 Please enter a product id
-                </div>
-                
+            </div>
+
         </div>
-
-
+        <div>
+            <label> Product Name </label>
+            <input type="text" class="form-control" formControlName="productName">
+            <div *ngIf="productForm.controls['productName'].hasError('required')" class="alert alert-danger">
+                Please enter a product name
+            </div>
+        </div>
+        <div>
+            <label> Quantity On Hand </label>
+            <input type="text" class="form-control" formControlName="quantityOnHand">
+            <div *ngIf="productForm.controls['quantityOnHand'].hasError('required')" class="alert alert-danger">
+                Please enter a quantity on hand
+            </div>
+        </div>
+        <div>
+            <label> Price </label>
+            <input type="text" class="form-control" formControlName="price">
+            <div *ngIf="productForm.controls['price'].hasError('required')" class="alert alert-danger">
+                Please enter a price
+            </div>
+        </div>
         <button [disabled]="!productForm.valid" type="submit" class="btn btn-primary">Submit</button>
     </div>
 </form>
