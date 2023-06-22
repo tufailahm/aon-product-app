@@ -1,25 +1,20 @@
-<h3>User Form - 1</h3>
-<div class="container">
-    <form>
-        <label>Name</label>
-        <div class="form-group">
-            <input type="text" class="form-control">
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-</div>
 <h1>Angular Template Driven Form</h1>
-<hr/>
+<hr />
 <h3>User Form - 2</h3>
-<form #userForm="ngForm" >
-    <div class="container">
-        <label>Name</label>
-        <input type="text" class="form-control" 
-            name="name" 
-            [(ngModel)]="myName" 
-            required
-            minlength="4">
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <h1>Please enter your name</h1>
+<form #userForm="ngForm">
+    <div class="form-group">
+
+        Name : <input type="text" id="firstname" name="firstname" 
+            required 
+            minlength="4" 
+            #firstname="ngModel"
+            [(ngModel)]="myName">
+
+        <div *ngIf="!firstname?.valid && (firstname?.dirty || firstname?.touched)" class="alert alert-danger">
+            Invalid First Name
+        </div>
+
     </div>
+
+
 </form>
