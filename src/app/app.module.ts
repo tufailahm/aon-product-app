@@ -20,13 +20,15 @@ import { CityComponent } from './components/city/city.component';
 import { WeatherComponent } from './components/weather/weather.component';
 import { UserformComponent } from './components/userform/userform.component';
 import { AddproductComponent } from './components/addproduct/addproduct.component';
+import { ReverseStringPipe } from './pipes/reverse-string.pipe';
+import { WelcomeMessagePipe } from './pipes/welcome-message.pipe';
 
 @NgModule({
   declarations: [
     AppComponent, 
     ContactusComponent,
      AboutusComponent, 
-     HelpComponent, ManagerComponent, EmployeeComponent, MessageComponent, ProductListComponent, ProductDetailComponent, ProductSummaryComponent, CityComponent, WeatherComponent, UserformComponent, AddproductComponent
+     HelpComponent, ManagerComponent, EmployeeComponent, MessageComponent, ProductListComponent, ProductDetailComponent, ProductSummaryComponent, CityComponent, WeatherComponent, UserformComponent, AddproductComponent, ReverseStringPipe, WelcomeMessagePipe
   ],
   imports: [
     BrowserModule,

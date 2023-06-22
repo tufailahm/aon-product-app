@@ -8,6 +8,8 @@ import { Component } from "@angular/core";
 })
 export class AppComponent
 {
+        salary = 258000;
+        message = "AON Alstrom Product App";
         employeeName : string = "Mohammad Tufail"
         name="Ahmed";
         email = 'tufailahmedkhan@gmail.com';
