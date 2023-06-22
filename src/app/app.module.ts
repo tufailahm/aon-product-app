@@ -18,13 +18,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductSummaryComponent } from './components/product-summary/product-summary.component';
 import { CityComponent } from './components/city/city.component';
 import { WeatherComponent } from './components/weather/weather.component';
+import { UserformComponent } from './components/userform/userform.component';
 
 @NgModule({
   declarations: [
     AppComponent, 
     ContactusComponent,
      AboutusComponent, 
-     HelpComponent, ManagerComponent, EmployeeComponent, MessageComponent, ProductListComponent, ProductDetailComponent, ProductSummaryComponent, CityComponent, WeatherComponent
+     HelpComponent, ManagerComponent, EmployeeComponent, MessageComponent, ProductListComponent, ProductDetailComponent, ProductSummaryComponent, CityComponent, WeatherComponent, UserformComponent
   ],
   imports: [
     BrowserModule,

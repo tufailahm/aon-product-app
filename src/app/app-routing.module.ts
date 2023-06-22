@@ -8,6 +8,7 @@ import { ContactusComponent } from './contactus.component';
 import { ProductGuardService } from './guard/product-guard.service';
 import { checkproductGuard } from './guard/checkproduct.guard';
 import { CityComponent } from './components/city/city.component';
+import { UserformComponent } from './components/userform/userform.component';
 const routes: Routes = [
   { path: '', component: ProductDetailComponent },
   { path: 'city', component: CityComponent },
@@ -25,6 +26,8 @@ const routes: Routes = [
     ]
   },
   { path: 'aboutUs', component: AboutusComponent },
+  { path: 'userForm', component: UserformComponent },
+
   { path: '**', component: ContactusComponent },
 ];
 
