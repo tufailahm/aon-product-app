@@ -8,7 +8,7 @@ import { AboutusComponent } from './aboutus';
 import { HelpComponent } from './help.component';
 import { ManagerComponent } from './components/manager/manager.component';
 import { EmployeeComponent } from './components/employee/employee.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MessageComponent } from './components/message/message.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
@@ -19,19 +19,21 @@ import { ProductSummaryComponent } from './components/product-summary/product-su
 import { CityComponent } from './components/city/city.component';
 import { WeatherComponent } from './components/weather/weather.component';
 import { UserformComponent } from './components/userform/userform.component';
+import { AddproductComponent } from './components/addproduct/addproduct.component';
 
 @NgModule({
   declarations: [
     AppComponent, 
     ContactusComponent,
      AboutusComponent, 
-     HelpComponent, ManagerComponent, EmployeeComponent, MessageComponent, ProductListComponent, ProductDetailComponent, ProductSummaryComponent, CityComponent, WeatherComponent, UserformComponent
+     HelpComponent, ManagerComponent, EmployeeComponent, MessageComponent, ProductListComponent, ProductDetailComponent, ProductSummaryComponent, CityComponent, WeatherComponent, UserformComponent, AddproductComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [MessageService,ProductService],
   bootstrap: [AppComponent]

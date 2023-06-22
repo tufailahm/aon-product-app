@@ -12,12 +12,15 @@
         </div>
         <div>
             <label>PostalCode</label>
-            <input type="text" #refPinCode="ngModel" required pattern="^[1-9][0-9]{4}$" class="form-control" name="postalCode"
+            <input type="text" #refPinCode="ngModel" required pattern="^[8][0-9]{9}$" class="form-control" name="postalCode"
                 ngModel
                 [(ngModel)]="postalCode">
             <div *ngIf="refPinCode.errors && (refPinCode.dirty || refPinCode.touched)" class="alert alert-danger">
                 <div *ngIf="refPinCode.errors?.['pattern']">
-                    Please enter a five digit number.
+                    Please enter a 10 digit number starting with 8
+                </div>
+                <div *ngIf="refPinCode.errors?.['required']">
+                    Please enter a postal code
                 </div>
             </div>
         </div>
