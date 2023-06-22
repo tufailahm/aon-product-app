@@ -1,0 +1,28 @@
+<h1>
+    <div [ngStyle]="{'background-color':'green'}">Mohammad Tufail Ahmed</div>
+
+    <div [ngSwitch]="color">
+        <p *ngSwitchCase="'red'">You have selected red color</p>
+        <p *ngSwitchCase="'green'">You have selected green color</p>
+        <p *ngSwitchCase="'blue'">You have selected blue color</p>
+        <p *ngSwitchDefault>Invalid Color</p>
+    </div>
+    <p *ngIf="married">Spouse Insurance Details</p>
+</h1>
+<h2>New Department : <input type="text" [(ngModel)]="newdept"> </h2>
+<button (click)="addDepartment()">Add Department</button>
+<h2>List of departments</h2>
+<ul>
+    <li *ngFor="let d of departments">
+        {{d}} <button (click)="deleteDepartment(d)">x</button>
+    </li>
+</ul>
+
+<h4>NgStyle</h4>
+<ul *ngFor="let person of people">
+    <li [ngStyle]="{'color':getColor(person.country)}"> {{ person.name }} ({{ person.country }})
+    </li>
+</ul>
+
+<app-product-list></app-product-list>
+<app-product-detail></app-product-detail>

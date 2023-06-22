@@ -1,0 +1,20 @@
+[
+    {
+        "productId": 1,
+        "productName": "Lakme",
+        "quantityOnHand": 1,
+        "price": 1
+    },
+    {
+        "productId": 2,
+        "productName": "Aroma",
+        "quantityOnHand": 2,
+        "price": 2
+    },
+    {
+        "productId": 3,
+        "productName": "Tan",
+        "quantityOnHand": 3,
+        "price": 3
+    }
+]

@@ -1,0 +1,14 @@
+<H1>Product Details</H1>
+<ul>
+    <li *ngFor="let product of products">
+          <a (click)="gotoProductSummary(product.productId,product.productName)">
+            {{ product.productId}}
+           </a>  -
+            {{ product.quantityOnHand}} -
+            {{ product.price}} 
+    </li>
+</ul>
+{{ message}}
+
+<h2>Details of the product :</h2>
+<router-outlet></router-outlet>
