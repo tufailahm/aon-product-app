@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./userform.component.css']
 })
 export class UserformComponent {
-
+  myName:string = "";
 }

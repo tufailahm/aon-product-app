@@ -2,10 +2,10 @@ import { Component } from "@angular/core";
 
 @ Component({
     selector : 'about-app',
-    template : '<h1>About us : Mohammad Tufail Ahmed<h1> {{ hello }}'
+    template : '<h2>About us : Mohammad Tufail Ahmed<h2> {{ hello }}'
 })
 export class AboutusComponent
 {
-    hello = "JJ";
+    hello = "";
     
 }
