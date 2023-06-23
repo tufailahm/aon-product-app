@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-addproduct',
@@ -18,17 +19,29 @@ export class AddproductComponent {
      price: new FormControl('', Validators.required)
  
    }) */
-  constructor(public formBuilder: FormBuilder) { }
+  constructor(
+    public formBuilder: FormBuilder,
+    public productService: ProductService) { }
 
-  productForm = this.formBuilder.group({
-    productId: ['', Validators.required],
-    productName: ['', Validators.required],
-    quantityOnHand: ['', Validators.required],
-    price: ['', Validators.required],
-  })
+  productForm!: FormGroup;
+  successMessage! :string;
 
+  ngOnInit(): void {
+    this.productForm = this.formBuilder.group({
+      productId: ['', Validators.required],
+      productName: ['', Validators.required],
+      quantityOnHand: ['', Validators.required],
+      price: ['', Validators.required],
+    })
+  }
 
   onSubmit() {
     console.log(this.productForm.value);
+    //save the product in db
+    this.productService.saveProduct(this.productForm.value).subscribe((data:any) => {
+      this.successMessage = 'Product with product id '+this.productForm.value.productId+ ' saved successfully';
+      //redirect to productlist component
+      
+    },err => console.log("error occurred") )
   }
 }

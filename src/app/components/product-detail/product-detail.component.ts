@@ -13,7 +13,7 @@ import { ProductData } from 'src/app/util/productdata';
 export class ProductDetailComponent {
   products: Product[] = [];
   message!: string;
-
+  
   //DI
   constructor(
     public productService: ProductService,
@@ -28,5 +28,21 @@ export class ProductDetailComponent {
   gotoProductSummary(productId: number,productName:string) {
     this.router.navigate(["productDetail/productSummary/",productId,productName]);
     console.log("You clicked on :" + productId);
+  }
+
+  removeProduct(productId: number) {
+    this.productService.deleteProduct(productId).subscribe((data: any) => {
+      this.message = 'Product with product id ' + productId + ' deleted successfully';
+      this.refreshProducts();
+    }, err => {
+     // this.errorMessage = err;
+    
+    })
+  }
+
+  refreshProducts() {
+    this.productService.getProductsFromExternalFile().subscribe((data: any) => {
+      this.products = data;
+    }, err => console.log("error"))
   }
 }

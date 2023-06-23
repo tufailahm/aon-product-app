@@ -4,8 +4,13 @@
           <a (click)="gotoProductSummary(product.productId,product.productName)">
             {{ product.productId}}
            </a>  -
+           {{ product.productName}}
             {{ product.quantityOnHand}} -
             {{ product.price}} 
+           <button class="btn btn-danger"
+            (click)="removeProduct(product.productId)">Delete
+          </button>
+
     </li>
 </ul>
 {{ message}}
