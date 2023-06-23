@@ -1,0 +1,10 @@
+<div class="col-md-6">
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let product of productItems$ | async">
+            {{product.productId}}:
+            <b>{{product.productName}}</b>-
+            <b>{{product.quantityOnHand}}</b>-
+            <b>{{product.price}}</b>
+        </li>
+    </ul>
+</div>

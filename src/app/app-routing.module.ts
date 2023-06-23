@@ -11,6 +11,7 @@ import { CityComponent } from './components/city/city.component';
 import { UserformComponent } from './components/userform/userform.component';
 import { AddproductComponent } from './components/addproduct/addproduct.component';
 import { PostsComponent } from './components/posts/posts.component';
+import { ProductFluxComponent } from './components/product-flux/product-flux.component';
 const routes: Routes = [
   { path: '', component: ProductDetailComponent },
   { path: 'city', component: CityComponent },
@@ -29,7 +30,7 @@ const routes: Routes = [
   },
   { path: 'aboutUs', component: AboutusComponent },
   { path: 'posts', component: PostsComponent },
-
+  { path: 'productFlux', component: ProductFluxComponent },
   { path: 'userForm', component: UserformComponent },
   { path: 'addProduct', component: AddproductComponent },
   { path: 'product', loadChildren: () => import('./productmodule/productmodule.module').then(m => m.ProductmoduleModule) },

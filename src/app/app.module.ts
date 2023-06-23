@@ -26,6 +26,7 @@ import { SharedModule } from './shared/shared.module';
 import { PostsComponent } from './components/posts/posts.component';
 import { StoreModule } from '@ngrx/store';
 import { ProductReducer } from './store/reducers/product.reducer';
+import { ProductFluxComponent } from './components/product-flux/product-flux.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { ProductReducer } from './store/reducers/product.reducer';
      ProductSummaryComponent, CityComponent, 
      WeatherComponent, UserformComponent, 
      AddproductComponent, ReverseStringPipe, 
-     WelcomeMessagePipe, PostsComponent, 
+     WelcomeMessagePipe, PostsComponent, ProductFluxComponent, 
   ],
   imports: [
     BrowserModule,
@@ -48,7 +49,7 @@ import { ProductReducer } from './store/reducers/product.reducer';
     ReactiveFormsModule,
     SharedModule,
     StoreModule.forRoot({
-      product: ProductReducer
+      product: ProductReducer,
     })
   ],
   providers: [MessageService,ProductService],
