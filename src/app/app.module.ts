@@ -22,20 +22,29 @@ import { UserformComponent } from './components/userform/userform.component';
 import { AddproductComponent } from './components/addproduct/addproduct.component';
 import { ReverseStringPipe } from './pipes/reverse-string.pipe';
 import { WelcomeMessagePipe } from './pipes/welcome-message.pipe';
+import { SharedModule } from './shared/shared.module';
+import { PostsComponent } from './components/posts/posts.component';
 
 @NgModule({
   declarations: [
     AppComponent, 
     ContactusComponent,
      AboutusComponent, 
-     HelpComponent, ManagerComponent, EmployeeComponent, MessageComponent, ProductListComponent, ProductDetailComponent, ProductSummaryComponent, CityComponent, WeatherComponent, UserformComponent, AddproductComponent, ReverseStringPipe, WelcomeMessagePipe
+     HelpComponent, ManagerComponent, 
+     EmployeeComponent, MessageComponent, 
+     ProductListComponent, ProductDetailComponent, 
+     ProductSummaryComponent, CityComponent, 
+     WeatherComponent, UserformComponent, 
+     AddproductComponent, ReverseStringPipe, 
+     WelcomeMessagePipe, PostsComponent, 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ],
   providers: [MessageService,ProductService],
   bootstrap: [AppComponent]

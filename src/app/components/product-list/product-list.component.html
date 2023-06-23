@@ -1,4 +1,13 @@
-<H1>Product List</H1>
+<H1 *ngIf="show">Product List - Built in Structural directive</H1>
+
+<h1 appHidden>Should not come -- Product List - Just be hidden</h1>
+<hr/>
+<h1 myHidden2={{show}}>Product List TRUE - Just be hidden</h1>
+<h1 appHidden2="true">Product List - Just be hidden</h1>
+<hr/>
+
+<div *myIfPPP="false">Product List Structutral- Through @Input</div>
+
 <ul>
     <li *ngFor="let product of products">
             {{ product.productName}} 

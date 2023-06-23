@@ -11,7 +11,7 @@ import { ProductData } from 'src/app/util/productdata';
   styleUrls: ['./product-detail.component.css']
 })
 export class ProductDetailComponent {
-  products!: Product[];
+  products: Product[] = [];
   message!: string;
 
   //DI

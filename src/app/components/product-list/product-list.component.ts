@@ -10,6 +10,7 @@ import { ProductData } from 'src/app/util/productdata';
 })
 export class ProductListComponent {
   //case2
+  show = false;
   products: Product[] ;
   message! : string;
   constructor(public productService:ProductService){
