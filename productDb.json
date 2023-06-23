@@ -1,0 +1,16 @@
+{
+  "product": [
+    {
+      "productId": "12",
+      "productName": "Printer",
+      "quantityOnHand": "12",
+      "price": "12"
+    },
+    {
+      "productId": "1",
+      "productName": "Jau",
+      "quantityOnHand": "77",
+      "price": "11"
+    }
+  ]
+}
