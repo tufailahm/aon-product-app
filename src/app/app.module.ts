@@ -24,6 +24,8 @@ import { ReverseStringPipe } from './pipes/reverse-string.pipe';
 import { WelcomeMessagePipe } from './pipes/welcome-message.pipe';
 import { SharedModule } from './shared/shared.module';
 import { PostsComponent } from './components/posts/posts.component';
+import { StoreModule } from '@ngrx/store';
+import { ProductReducer } from './store/reducers/product.reducer';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,10 @@ import { PostsComponent } from './components/posts/posts.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    StoreModule.forRoot({
+      product: ProductReducer
+    })
   ],
   providers: [MessageService,ProductService],
   bootstrap: [AppComponent]
